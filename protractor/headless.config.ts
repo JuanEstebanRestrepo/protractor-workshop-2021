@@ -5,7 +5,7 @@ export const config: Config = {
   framework: 'jasmine',
   specs: [ '../test/**/*.spec.js' ],
   SELENIUM_PROMISE_MANAGER: false,
-  getPageTimeout: 1000,
+  getPageTimeout: 120000,
   capabilities: {
     browserName: 'chrome',
     chromeOptions: {
@@ -17,8 +17,4 @@ export const config: Config = {
     reporter();
   }
 };
-
-onPrepare: () => {
-  browser.ignoreSynchronization = true;
-}
 
