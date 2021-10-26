@@ -18,31 +18,20 @@ describe('Buy a t-shirt', () => {
   it('then should be bought a t-shirt', async () => {
 
     await browser.get('http://automationpractice.com/');
-    await(browser.sleep(3000));
     await menuContentPage.goToTShirtMenu();
-    await(browser.sleep(3000));
     await productListPage.goToTShirtProductList();
-    await(browser.sleep(3000));
     await productAddedModalPage.goToTShirtProductAddedModal();
-    await(browser.sleep(3000));
     await summaryStepPage.goToTShirtSummaryStep();
-    await(browser.sleep(3000));
 
     await signInStepPage.goToTShirtSignInStep();
-    await(browser.sleep(3000));
 
     await addressStepPage.goToTShirtAddressStep();
-    await(browser.sleep(3000));
 
     await shippingStepPage.goToTShirtShippingStep();
-    await(browser.sleep(3000));
 
     await paymentStepPage.goToTShirtPaymentStep();
-    await(browser.sleep(3000));
     await bankPaymentPage.goToTShirtBankPayment();
-    await(browser.sleep(3000));
     await orderSummaryPage.goToTShirtOrderSummary();
-    await(browser.sleep(3000));
 
     await expect($('#center_column > div > p > strong').getText())
       .toBe('Your order on My Store is complete.');
