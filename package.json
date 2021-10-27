@@ -4,7 +4,7 @@
   "description": "This is a Workshop about Protractor",
   "main": "index.js",
   "scripts": {
-    "clean": "rm -rf dist",
+    "clean": "rm -rf dist && rm -rf reports",
     "build": "npm run lint && npm run clean && tsc",
     "test:local": "npm run build && protractor dist/protractor/local.config.js",
     "test:headless": "npm run build && protractor dist/protractor/headless.config.js",
@@ -33,6 +33,7 @@
     "@typescript-eslint/parser": "^4.33.0",
     "eslint": "^7.32.0",
     "eslint-config-airbnb-typescript": "^14.0.1",
+    "jasmine-awesome-report": "^0.1.0",
     "jasmine-spec-reporter": "^7.0.0",
     "protractor": "^7.0.0",
     "typescript": "^4.4.4"
